@@ -1,0 +1,13 @@
+.DS_Store
+build/
+.build/
+.swiftpm/
+xcuserdata/
+*.xcresult
+DerivedData/
+DemoApp/AmplifierDemo.xcodeproj/
+.claude/
+memory/
+tasks/
+journal/
+snapshots/

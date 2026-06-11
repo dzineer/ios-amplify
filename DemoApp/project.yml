@@ -1,0 +1,33 @@
+name: AmplifierDemo
+options:
+  bundleIdPrefix: com.dzineer
+  deploymentTarget:
+    iOS: "17.0"
+packages:
+  MicAmplifier:
+    path: ..
+targets:
+  AmplifierDemo:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+      - Assets.xcassets
+    dependencies:
+      - package: MicAmplifier
+    info:
+      path: Sources/Info.plist
+      properties:
+        NSMicrophoneUsageDescription: "The microphone is amplified and routed to your headphones."
+        NSSpeechRecognitionUsageDescription: "Speech is transcribed live while you monitor the microphone."
+        UIBackgroundModes: [audio]
+        UILaunchScreen: {}
+        ITSAppUsesNonExemptEncryption: false
+        CFBundleDisplayName: "Mic Amplifier"
+    settings:
+      base:
+        TARGETED_DEVICE_FAMILY: "1"
+        CODE_SIGN_STYLE: Automatic
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        MARKETING_VERSION: "1.0.0"
+        CURRENT_PROJECT_VERSION: "1"
